@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: azure-gov-creds
+  namespace: cattle-global-data
+type: Opaque
+stringData:
+  azurecredentialConfig-clientId: YOUR_AZURE_SERVICE_PRINCIPAL APP_ID
+  azurecredentialConfig-clientSecret: YOUR_AZURE_SERVICE_PRINCIPAL_PASSWORD
+  azurecredentialConfig-subscriptionId: YOUR_AZURE_SUBSCRIPTION_ID
+  azurecredentialConfig-environment: AzureUSGovernmentCloud
+  azurecredentialConfig-tenantId: ""

@@ -1,0 +1,49 @@
+apiVersion: rke-machine-config.cattle.io/v1
+kind: AzureConfig
+metadata:
+  name: nc-azure-gov-cluster-main
+  namespace: fleet-default
+# AzureGov Provisioning Info
+acceleratedNetworking: false
+availabilitySet: azure-gov-cluster1-az # Dynamically Created
+availabilityZone: ""
+clientId: null
+clientSecret: null
+customData: null
+diskSize: "30"
+dns: null
+dockerPort: "2376"
+enablePublicIpStandardSku: false
+environment: AzureUSGovernmentCloud
+faultDomainCount: "3"
+image: canonical:UbuntuServer:18.04-LTS:latest
+kind: AzureConfig
+location: usgovvirginia
+managedDisks: false
+noPublicIp: false
+nsg: rancher-azuregov-managed-nsg # Dynamically Created
+openPort:
+- 6443/tcp
+- 2379/tcp
+- 2380/tcp
+- 8472/udp
+- 4789/udp
+- 9796/tcp
+- 10256/tcp
+- 10250/tcp
+- 10251/tcp
+- 10252/tcp
+privateIpAddress: null
+resourceGroup: azure-gov-cluster1-rg # Dynamically Created
+size: Standard_D3_v2
+sshUser: docker-user
+staticPublicIp: false
+storageType: Standard_LRS
+subnet: azure-gov-cluster1-subnet
+subnetPrefix: 192.168.0.0/16
+subscriptionId: null
+tags: null
+tenantId: null
+updateDomainCount: "5"
+usePrivateIp: false
+vnet: azure-gov-cluster1-vnet # Dynamically Created
